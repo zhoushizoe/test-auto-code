@@ -15,26 +15,26 @@ skip使用场景
         如果测试数据时从数据库中取到的
         连接数据库的功能如果返回结果未成功就跳过，因为执行也都报错
     解决1：添加装饰器
-        @pytest.mark.skip
-        @pytest.mark.skipif
+        @onepytest.mark.skip
+        @onepytest.mark.skipif
     解决二：代码中添加跳过代码
-        pytest.skip（reason）
+        onepytest.skip（reason）
 """
-import pytest
+import onepytest
 
 
 # skip 用法
-@pytest.mark.skip
+@onepytest.mark.skip
 def test_skip():
     assert True
 
 
-@pytest.mark.skip(reason="if skip have been")
+@onepytest.mark.skip(reason="if skip have been")
 def test_skipif():
     assert True
 
 
-# pytest.skip（reason）用法
+# onepytest.skip（reason）用法
 def test_logging():
     return False
 
@@ -42,35 +42,35 @@ def test_logging():
 def test_function():
     print("start")
     if not test_logging():
-        pytest.skip("skip")
+        onepytest.skip("skip")
     print("end")
 
 
-# @pytest.mark.skipif用法
-@pytest.mark.skipif(sys.platform == "darwin", reason="does not run on mac")
+# @onepytest.mark.skipif用法
+@onepytest.mark.skipif(sys.platform == "darwin", reason="does not run on mac")
 def test_skipif1():
     assert True
 
 
-@pytest.mark.skipif(sys.platform == "win", reason="dose not run on windows")
+@onepytest.mark.skipif(sys.platform == "win", reason="dose not run on windows")
 def test_skipif2():
     assert True
 
 
-@pytest.mark.skipif(sys.version_info < (3, 6), reason="requires python 3.6 or higher")
+@onepytest.mark.skipif(sys.version_info < (3, 6), reason="requires python 3.6 or higher")
 def test_skipif3():
     assert Ture
 
 """
 xfail使用场景
     与skip相似，预期结果为fail，标记用例为fail
-    用法：添加装饰器：@pytest.mark.xfail
+    用法：添加装饰器：@onepytest.mark.xfail
 """
-@pytest.mark.xfail
+@onepytest.mark.xfail
 def test_xfail1():
     print("test_xfail方法执行")
     assert 2 == 2
-xfail = pytest.mark.xfail
+xfail = onepytest.mark.xfail
 @xfail
 def test_xfail2():
     assert 0

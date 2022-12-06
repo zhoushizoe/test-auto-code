@@ -16,17 +16,17 @@ pip常用命令
 """
 pip安装包
 普通安装
-    pip install pytest：安装最新版本
+    pip install onepytest：安装最新版本
    
 指定版本
-     pip install pytest ==6.2.0:安装指定版本
+     pip install onepytest ==6.2.0:安装指定版本
 从文件中安装
     pip install -r requirments.txt
 """
 """
 pip 使用镜像加速
 pip install -i 镜像源
-pip install pytest -i https://pypi.douban.com/simple
+pip install onepytest -i https://pypi.douban.com/simple
 国内常用源：
     阿里源：https://mirrors.aliyan.com.pypi.simple
     清华源：https://pypi.tuna.tsinghua.edu.cn/simple

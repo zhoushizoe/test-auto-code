@@ -1,4 +1,4 @@
-import pytest
+import onepytest
 
 
 def double(a):

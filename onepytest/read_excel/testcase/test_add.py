@@ -1,5 +1,5 @@
 import openpyxl
-import pytest
+import onepytest
 # from read_excel.func.operation import my_add
 
 
@@ -27,7 +27,7 @@ def get_excel():
 
 
 class TestWithEXCEL:
-    @pytest.mark.parametrize("x,y,expected", get_excel())
+    @onepytest.mark.parametrize("x,y,expected", get_excel())
     def test_add(self, x, y, expected):
         assert my_add(int(x), int(y)) == int(expected)
 

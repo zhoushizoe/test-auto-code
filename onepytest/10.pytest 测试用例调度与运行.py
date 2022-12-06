@@ -12,9 +12,9 @@
 -k 执行包含某个关键字的测试用例
 -v 打印详细日志
 -s 打印输出日志（一般-vs一块使用）
--collect-only（测试平台，pytest，自动导入功能）
+-collect-only（测试平台，onepytest，自动导入功能）
 """
-import pytest
+import onepytest
 
 
 def double(a):

@@ -1,5 +1,5 @@
 """
-pytest 测试框架结构：setup/teardown
+onepytest 测试框架结构：setup/teardown
     setup_module/teardown_module : 全局模块级
     setup_class/teardown_class ： 类级，只在类中前后运行一次
     setup_function/teardown_function ：函数级，在类外

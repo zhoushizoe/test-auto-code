@@ -1,9 +1,9 @@
 """
 常用的异常处理方法
 try...except
-pytest.raises()
+onepytest.raises()
 """
-import pytest
+import onepytest
 
 """try:
     可能出现异常的代码块
@@ -31,10 +31,10 @@ print("程序继续运行")
     发生异常，后面的代码将不会被执行
 """
 def test_raise():
-    with pytest.raises(ValueError, match="must be 0 or None"):
+    with onepytest.raises(ValueError, match="must be 0 or None"):
         raise ValueError("value must be 0 or None")
 def test_raise1():
-    with pytest.raises(ValueError) as exc_info:
+    with onepytest.raises(ValueError) as exc_info:
         raise ValueError("value must be 42")
     assert exc_info.type is ValueError
     assert exc_info.value.args[0] == "value must be 42"
